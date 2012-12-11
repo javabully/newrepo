@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Lib Plug-in
+Bundle-SymbolicName: com.sorted.test.lib; singleton:=true
+Bundle-Version: 0.0.1
+Bundle-Activator: com.sorted.test.lib.Activator
+Bundle-Vendor: Metaflow Solutions
+Bundle-Localization: PluginResources
+Require-Bundle: org.eclipse.core.runtime,
+ com.sorted.runtime
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: lib-lib-plugin-runtime.jar

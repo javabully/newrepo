@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<project name="metaserver-com.sorted.test.lib" default="make-contrib-jar" basedir=".">
+
+	<property name="classes.dir"            location="bin"/>
+	<property name="metaserver-contrib.jar" location="metaserver-contrib-plugin-com.sorted.test.lib.jar"/>
+	
+	
+	<target name="make-contrib-jar"  depends="">
+		<jar destfile="${metaserver-contrib.jar}" manifest="META-INF/MANIFEST.MF">
+			<fileset dir="${classes.dir}"/>
+			<zipfileset file="plugin.xml"/>
+			<zipfileset file="PluginResources.properties"/>
+		</jar>
+	</target>
+	
+	<target name="build-standalone"  depends="make-contrib-jar">
+		<copy file="${metaserver-contrib.jar}" todir="${target.jar.dir}"/>
+	</target>
+	
+	<target name="build-packager"/>
+	
+	<target name="build-metaserver"  depends="build-standalone">
+	</target>
+	
+
+</project>
